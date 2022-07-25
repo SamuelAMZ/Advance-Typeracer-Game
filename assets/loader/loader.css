@@ -1,0 +1,62 @@
+.section-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: transparent;
+
+  display: none;
+}
+
+.loader {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  filter: url(#gooey);
+
+  animation: animate 5s linear infinite;
+}
+@-moz-document url-prefix() {
+  .loader {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10'/></filter></svg>#grayscale");
+  }
+}
+
+.loader span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(45deg * var(--i)));
+}
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: var(--bk-second1);
+  border-radius: 50%;
+  box-shadow: 0 0 30px var(--bk-second1);
+}
+
+.rotate {
+  animation: animate 3s ease-in-out infinite;
+  animation-delay: calc(-0.2s * var(--j));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.svg {
+  width: 0;
+  height: 0;
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeRacer Game V1.0</title>
+    <!-- font -->
+    <link rel="stylesheet" href="./assets/fonts/alata.css" />
+    <!-- icons -->
+    <link rel="stylesheet" href="./assets/icons/awesome/icons.min.css" />
+    <!-- css main file -->
+    <link rel="stylesheet" href="./assets/css/dashboard/dashboard.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard/themes.css" />
+    <link rel="stylesheet" href="./assets/css/elements/type_styles.css" />
+    <link rel="stylesheet" href="./assets/css/elements/race-types.css" />
+    <link rel="stylesheet" href="./assets/css/elements/race-views.css" />
+    <link rel="stylesheet" href="./assets/loader/loader.css" />
+    <link rel="stylesheet" href="./assets/css/elements/others.css" />
+  </head>
+  <body class="theme-3">
+    <header>
+      <h1><a href="./index.html">TypeRacer Game V1.0</a></h1>
+      <span class="github"><i class="fa-brands fa-github"></i></span>
+      <!-- <div class="notification">Lorem alert</div> -->
+    </header>
+    <main>
+      <div class="container">
+        <!-- controlls -->
+
+        <!-- You VS Computer race -->
+        <div class="race-type">
+          <div class="race-type-title">
+            <h2>You VS Computer Race</h2>
+          </div>
+
+          <div class="race-type-desc">
+            <p>
+              Run against a bot that will have a random speed between 20wpm and
+              100wpm. Your mission is to type the text faster than the bot.<br />
+              Good Luck!!!
+            </p>
+          </div>
+          <div class="race-type-action">
+            <span><p class="race-type-action-comp">Try It!</p></span>
+          </div>
+        </div>
+
+        <!-- Custom Race race -->
+        <div class="race-type">
+          <div class="race-type-title">
+            <h2>Custom Race</h2>
+          </div>
+
+          <div class="race-type-desc">
+            <p>
+              Choose exactly what you want for your next race. You can choose
+              your bots (challengers) , their name, their speed and the number
+              of bot. <br />
+              Good Luck!!!
+            </p>
+          </div>
+          <div class="race-type-action">
+            <span><p class="race-type-action-custom">Try It!</p></span>
+          </div>
+        </div>
+
+        <!-- normal race -->
+        <div class="race-type">
+          <div class="race-type-title">
+            <h2>Normal Race</h2>
+          </div>
+
+          <div class="race-type-desc">
+            <p>
+              Train on your own before taking on the incredibly fast bots.
+              <br />
+              Good training!!!
+            </p>
+          </div>
+          <div class="race-type-action">
+            <span><p class="race-type-action-normal">Try It!</p></span>
+          </div>
+        </div>
+
+        <div class="elements">
+          <!-- write here -->
+        </div>
+        <!-- mobiles -->
+        <div class="hide-controls-panel-bc">
+          <i class="fa-solid fa-angle-right bc"></i>
+        </div>
+      </div>
+
+      <div class="containtest">
+        <!-- mobiles -->
+        <div class="hide-controls-panel-mb">
+          <i class="fa-solid fa-angle-right mb"></i>
+        </div>
+        <!-- desktop -->
+        <div class="hide-controls-panel">
+          <i class="fa-solid fa-angle-right dt"></i>
+        </div>
+        <div class="test">
+          <!-- write tests project -->
+          <div class="test-element">
+            <!-- type-cars -->
+            <div class="type-cars">
+              <div class="car">
+                <!-- you -->
+                <!-- WPM & CPM -->
+                <div class="you-name">
+                  <p>You</p>
+                </div>
+
+                <div class="car-start"></div>
+
+                <div class="car-container">
+                  <img id="you-car" src="assets/imgs/car.svg" alt="race car" />
+                </div>
+
+                <!-- WPM & CPM -->
+                <div class="wpm-and-cpm">
+                  <p id="wpm">0 WPM</p>
+                  <p id="cpm">0 CPM</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <!-- texts div  -->
+              <div class="type-text">
+                <span>
+                  <span class="passed"><p id="passed"></p></span>
+                  <span>
+                    <p id="text-to-type">
+                      <!-- text will load here -->
+                    </p></span
+                  >
+                </span>
+                <div class="time-taked"><p>00:00</p></div>
+              </div>
+              <!-- type input -->
+              <div class="type-input">
+                <form>
+                  <input
+                    id="type-input"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="false"
+                    onselectstart="return false"
+                    onpaste="return false"
+                    onCopy="return false"
+                    onCut="return false"
+                    onDrag="return false"
+                    onDrop="return false"
+                    placeholder="Type the text here once the countdown is over"
+                  />
+                </form>
+              </div>
+            </div>
+            <!-- scroll to -->
+            <hr
+              id="scoll-to"
+              style="opacity: 0; visibility: none; pointer-events: none"
+            />
+
+            <!-- loader -->
+            <div class="loader-result">
+              <svg class="svg">
+                <filter id="gooey">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                  <feColorMatrix
+                    values="
+                      1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 20 -10
+              
+              "
+                  ></feColorMatrix>
+                </filter>
+              </svg>
+              <div class="loader">
+                <span style="--i: 1"></span>
+                <span style="--i: 2"></span>
+                <span style="--i: 3"></span>
+                <span style="--i: 4"></span>
+                <span style="--i: 5"></span>
+                <span style="--i: 6"></span>
+                <span style="--i: 7"></span>
+                <span style="--i: 8"></span>
+                <span class="rotate" style="--j: 0"></span>
+                <span class="rotate" style="--j: 1"></span>
+                <span class="rotate" style="--j: 2"></span>
+                <span class="rotate" style="--j: 3"></span>
+                <span class="rotate" style="--j: 4"></span>
+              </div>
+            </div>
+
+            <!-- results -->
+            <div class="results">
+              <div class="text-info info">
+                <p class="res1">Course Performance</p>
+                <!-- chart -->
+                <div class="chartjs">
+                  <!-- <canvas id="chart"></canvas> -->
+                </div>
+              </div>
+              <div class="score info">
+                <p class="res1">Results</p>
+                <div class="res">
+                  <p class="res2">WPM:</p>
+                  <p class="rw res2">152.02</p>
+                </div>
+                <div class="res">
+                  <p class="res2">CPM:</p>
+                  <p class="rc res2">152.02</p>
+                </div>
+                <div class="res">
+                  <p class="res2">Time:</p>
+                  <p class="tc res2">00:00</p>
+                </div>
+                <div class="res">
+                  <p class="res2">Accuracy:</p>
+                  <p class="ra res2">92%</p>
+                </div>
+                <div class="res">
+                  <p class="res2">Mistakes:</p>
+                  <p class="rm res2">2</p>
+                </div>
+                <div class="res">
+                  <p class="res2">Nber Of Word:</p>
+                  <p class="rn res2">250</p>
+                </div>
+              </div>
+            </div>
+            <div id="new-start" class="new-race-btn">Leave The Race</div>
+
+            <!-- scroll to top -->
+            <!-- <div class="scroll-top">
+              <i class="fas fa-arrow-up"></i>
+              <p>Back To Top</p>
+            </div> -->
+          </div>
+
+          <!-- normal race view -->
+          <div class="normal-race-view">
+            <div class="normal-race-container">
+              <div class="normal-title">
+                <h3>Normal Race</h3>
+              </div>
+              <p>
+                Train on your own before taking on the incredibly fast bots.
+                <br />
+                Good training!!!
+              </p>
+              <button id="normal-start">Start</button>
+            </div>
+          </div>
+
+          <!-- you vs race view -->
+          <div class="you-vs-race-view">
+            <div class="normal-race-container">
+              <div class="normal-title">
+                <h3>You Vs Computer Race</h3>
+              </div>
+              <p>
+                Run against a bot that will have a random speed between 20wpm
+                and 100wpm. Your mission is to type the text faster than the
+                bot.<br />
+                Good Luck!!!
+              </p>
+              <button id="you-start">Start</button>
+            </div>
+          </div>
+
+          <!-- Custom race view -->
+          <div class="custom-race-view">
+            <div class="normal-race-container">
+              <div class="normal-title">
+                <h3>Custom Computer Race</h3>
+              </div>
+              <p>
+                Choose exactly what you want for your next race. You can choose
+                your bots (challengers) , their name, their speed and the number
+                of bot. <br />
+                Good Luck!!!
+              </p>
+              <div class="choice-custom-race">
+                <div class="a-bot">
+                  <select name="bot-name" id="bot-name">
+                    <option value="choose">Choose A Bot Name</option>
+                    <option value="sam">Sam</option>
+                    <option value="robot">Mr Robot</option>
+                    <option value="grimes">Rick Grimes</option>
+                    <option value="james">James</option>
+                  </select>
+                  <select name="bot-speed" id="bot-speed">
+                    <option value="choose">Choose A Bot Speed</option>
+                    <option value="20">20 WPM</option>
+                    <option value="30">30 WPM</option>
+                    <option value="40">40 WPM</option>
+                    <option value="50">50 WPM</option>
+                    <option value="60">60 WPM</option>
+                    <option value="70">70 WPM</option>
+                    <option value="80">80 WPM</option>
+                    <option value="90">90 WPM</option>
+                    <option value="100">100 WPM</option>
+                    <option value="200">200 WPM</option>
+                    <option value="300">300 WPM</option>
+                    <option value="400">400 WPM</option>
+                    <option value="500">500 WPM</option>
+                  </select>
+                  <button class="add-new">Add Bot</button>
+                  <button class="delete-bot">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </div>
+              <button id="custom-start">Start</button>
+            </div>
+          </div>
+
+          <!-- loader -->
+          <div class="section-animation">
+            <svg class="svg">
+              <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                <feColorMatrix
+                  values="
+                                1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 20 -10
+                        
+                        "
+                ></feColorMatrix>
+              </filter>
+            </svg>
+            <div class="loader">
+              <span style="--i: 1"></span>
+              <span style="--i: 2"></span>
+              <span style="--i: 3"></span>
+              <span style="--i: 4"></span>
+              <span style="--i: 5"></span>
+              <span style="--i: 6"></span>
+              <span style="--i: 7"></span>
+              <span style="--i: 8"></span>
+              <span class="rotate" style="--j: 0"></span>
+              <span class="rotate" style="--j: 1"></span>
+              <span class="rotate" style="--j: 2"></span>
+              <span class="rotate" style="--j: 3"></span>
+              <span class="rotate" style="--j: 4"></span>
+            </div>
+          </div>
+
+          <!-- others  -->
+          <div class="counterTimer">
+            <p>Start in 10s</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer">
+        <div class="theme1"></div>
+        <div class="theme2"></div>
+        <div class="theme3"></div>
+        <div id="footerheader" class="drag">
+          <i class="fa-solid fa-maximize"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="animation"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/dashboard/dashboard.js"></script>
+    <script src="./assets/js/dashboard/themes.js"></script>
+    <script type="module" src="./assets/js/views/index.js"></script>
+    <script type="module" src="./assets/js/race/move.js"></script>
+    <script type="module" src="./assets/js/race/logic.js"></script>
+    <script type="module" src="./assets/js/race/others.js"></script>
+    <script type="module" src="./assets/js/race/validation.js"></script>
+  </body>
+</html>

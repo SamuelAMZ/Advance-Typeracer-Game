@@ -1,0 +1,237 @@
+/* type cars */
+.type-cars {
+  background-color: var(--bk-second1);
+  width: 80%;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  border: 5px solid var(--bk-second1);
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  box-shadow: inset 0 0 10px #333a45;
+}
+.car {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 9fr;
+
+  position: relative;
+}
+
+.car-container {
+  height: 50px;
+  /* overflow: hidden; */
+  border-bottom: 3px dashed var(--bk-white);
+  border-left: 0;
+  position: relative;
+
+  border-right: 3px solid var(--bk-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-container::before {
+  content: "Finish";
+  display: block;
+  line-height: 1;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 2px 0 0 2px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: var(--bk-white);
+  color: var(--bk-second1);
+}
+
+.car-start {
+  height: 50px;
+  /* overflow: hidden; */
+  border-bottom: 3px dashed var(--bk-white);
+  border-right: 0;
+  position: relative;
+}
+
+.car-container img {
+  width: 100px;
+  height: auto;
+
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+
+  transform: translate(-100%, 0);
+}
+
+/* type text */
+.text {
+  border: 5px solid var(--bk-second1);
+  width: 80%;
+  height: auto;
+  margin: 0 auto 0rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.type-text {
+  background-color: var(--bk-white);
+  width: 100%;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 0;
+
+  position: relative;
+}
+.type-text span {
+  color: var(--bk-black);
+  line-height: 1.7;
+  display: inline;
+}
+.type-text span p {
+  color: black;
+  line-height: 1.7;
+  font-size: 1.3rem;
+  display: inline;
+}
+
+/* type input */
+.type-input {
+  width: 100%;
+}
+.type-input form input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bk-second1);
+  color: var(--bk-white);
+  font-size: 1.2rem;
+  padding: 1rem;
+  outline: var(--bk-second1);
+
+  border-top: 5px solid var(--bk-second1);
+  border-bottom: 0px;
+  border-right: none;
+  border-left: none;
+
+  box-shadow: inset 0 0 10px #333a45;
+}
+
+#passed {
+  color: rgb(3, 161, 3);
+}
+
+/* WPM & CPM & Time left */
+.wpm-and-cpm {
+  position: absolute;
+  width: 4.5vw;
+  height: auto;
+  font-size: 0.8rem;
+
+  top: -1vh;
+  right: -7.9vw;
+
+  line-height: 1.7;
+  color: var(--bk-white);
+  background-color: var(--bk-second1);
+  padding: 5px 3px 5px 4px;
+  border-radius: 10px;
+}
+
+.wpm-and-cpm::before {
+  content: "";
+  background-color: var(--bk-second1);
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  position: absolute;
+  top: 50%;
+  left: 0px;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.you-name {
+  position: absolute;
+  top: -0.5vh;
+  left: -8.5vw;
+
+  width: 3.5vw;
+  height: 3.5vh;
+
+  font-size: 0.8rem;
+
+  line-height: 1.7;
+  color: var(--bk-white);
+  background-color: var(--bk-second1);
+  padding: 5px 3px 5px 4px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.you-name::before {
+  content: "";
+  background-color: var(--bk-second1);
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  position: absolute;
+  top: 50%;
+  right: -12px;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.you-name-bot {
+  text-transform: capitalize;
+}
+
+/* 4k */
+@media only screen and (min-width: 2050px) {
+  .you-name {
+    width: 2.5vw;
+    left: -5.5vw;
+  }
+  .wpm-and-cpm {
+    width: 3vw;
+    right: -5.9vw;
+  }
+}
+
+/* laptop */
+@media only screen and (max-width: 1050px) {
+  .wpm-and-cpm,
+  .you-name {
+    display: none;
+  }
+}
+
+/* tablet */
+@media only screen and (max-width: 850px) {
+  .car-container img {
+    width: 70px;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 500px) {
+  .type-cars,
+  .text,
+  .loader-result,
+  .new-race-btn {
+    width: 100%;
+  }
+}

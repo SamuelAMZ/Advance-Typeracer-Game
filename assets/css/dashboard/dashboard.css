@@ -1,0 +1,343 @@
+/* themes */
+:root {
+  /* dark 1 */
+  --bk-prim1: #0c2852;
+  --bk-second1: #2f2fad;
+  --bk-white: rgba(255, 253, 253, 0.843);
+  --bk-black: rgba(14, 184, 224, 0);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "alataregular";
+}
+body {
+  height: 100vh;
+  color: var(--bk-white);
+  background-color: #0c2852;
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #6b85ad;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bk-second1);
+  border-radius: 10px;
+}
+
+button {
+  color: black;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  padding: 0 2rem 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: center;
+
+  /* display: flex;
+  flex-direction: column;*/
+}
+header h1 {
+  font-size: 1.7rem;
+}
+.github {
+  width: 90px;
+  height: 90px;
+  background-color: var(--bk-second1);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  top: 0px;
+  background: rgb(14, 184, 224);
+  background: linear-gradient(
+    50deg,
+    rgba(14, 184, 224, 0) 50%,
+    var(--bk-second1) 50%
+  );
+}
+.github i {
+  margin: -17px 0 0 27px;
+  font-size: 40px;
+  transform: rotate(50deg);
+  color: var(--bk-prim1);
+}
+main {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1.2fr 4fr;
+  position: relative;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  line-height: 3;
+  padding: 1.5rem 20px 0rem 20px;
+  border-top: 1px solid var(--bk-second1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* add via js start*/
+.hide-container-dt {
+  grid-template-columns: 0fr 4fr;
+}
+.hide-container-padding-dt {
+  padding: 0;
+}
+/* tablet adds */
+.hide-container-tb {
+  width: 100vw !important;
+}
+.hide-elements-tb {
+  width: 70vw !important;
+}
+.hide-hideControlMobile-tb {
+  left: 69.92vw !important;
+}
+/* mobile adds */
+.hide-elements-mb {
+  width: 90vw !important;
+}
+
+/* add via js end*/
+
+.elements {
+  overflow: auto;
+  height: 0vh;
+  padding: 0 5px 0 0;
+}
+
+.containtest {
+  border: 1px solid var(--bk-second1);
+  border-bottom: none;
+  border-right: none;
+  position: relative;
+}
+
+.hide-controls-panel-mb,
+.hide-controls-panel-bc {
+  display: none;
+}
+
+.hide-controls-panel {
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  background-color: var(--bk-second1);
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 0 7px 7px 0;
+  z-index: 10;
+  cursor: pointer;
+  /* align the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* test style */
+.test {
+  height: 100%;
+  overflow: hidden;
+  line-height: 3;
+  padding: 1.5rem 5px 5rem 25px;
+}
+
+.test-element {
+  overflow: auto;
+  height: 80vh;
+  padding: 0 5px 0 0;
+  display: none;
+
+  position: relative;
+}
+/* footer */
+footer > div {
+  position: fixed;
+  width: 150px;
+  height: 40px;
+  bottom: 1rem;
+  right: 1rem;
+  border: 3px solid var(--bk-second1);
+  background-color: var(--bk-second1);
+  border-radius: 100px 0 0 100px;
+  padding: 0 0 0 2px;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+footer div div {
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 1px solid var(--bk-white);
+}
+footer div .drag {
+  background-color: transparent;
+  border-radius: 0%;
+  cursor: move;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer div .drag i {
+  color: var(--bk-white);
+  font-size: 32px;
+}
+.theme1 {
+  background-color: #2f2fad;
+}
+.theme2 {
+  background-color: #323232;
+}
+.theme3 {
+  background-color: #4b2243;
+}
+
+/* responsive */
+@media only screen and (min-width: 2050px) {
+  .loader-result {
+    margin: 0 auto;
+  }
+  .type-cars,
+  .text,
+  .results,
+  .loader-result,
+  .new-race-btn {
+    max-width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  header {
+    grid-template-columns: 2fr 2fr;
+    line-height: 2;
+  }
+  .container {
+    background-color: var(--bk-prim1);
+    border-right: 1px solid var(--bk-second1);
+  }
+}
+/* laptop */
+@media only screen and (max-width: 1050px) {
+  main {
+    display: grid;
+    grid-template-columns: 0fr 4fr;
+    position: relative;
+  }
+  .container {
+    width: 0vw;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    overflow: scroll;
+    padding-bottom: 10rem !important;
+  }
+  .elements {
+    border-right: 1px solid var(--bk-second1);
+    width: 0;
+    padding: 1rem;
+    background-color: var(--bk-prim1);
+    height: 100%;
+  }
+  .hide-controls-panel {
+    display: none;
+  }
+
+  .hide-controls-panel-bc {
+    width: 20px;
+    height: 50px;
+    background-color: var(--bk-second1);
+    top: 50%;
+    left: 69.92vw;
+    transform: translate(0, -50%);
+
+    position: absolute;
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    /* align the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hide-controls-panel-mb {
+    width: 20px;
+    height: 50px;
+    background-color: var(--bk-second1);
+    top: 50%;
+    left: 0;
+    /* left: 69.92vw; */
+    transform: translate(0, -50%);
+
+    position: absolute;
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    /* align the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+
+    box-shadow: 7px 0px 5px 2px rgba(18, 18, 18, 0.245);
+  }
+  .containtest {
+    width: 100vw;
+  }
+}
+
+/* tablet */
+@media only screen and (max-width: 850px) {
+  header h1 {
+    font-size: 20px;
+  }
+  .github i {
+    font-size: 32px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 0fr 4fr;
+    position: relative;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 500px) {
+}

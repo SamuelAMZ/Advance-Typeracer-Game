@@ -1,0 +1,45 @@
+.counterTimer {
+  background-color: white;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: black;
+
+  box-shadow: 20 0 20px black;
+  font-size: 20px;
+
+  display: none;
+}
+/*  notifications */
+.notification {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border-radius: 10px 10px 0 10px;
+  border-bottom: 0.3rem solid var(--bk-second1);
+  z-index: 20000;
+  box-shadow: 0 0 12px 12px rgba(20, 20, 20, 0.09);
+}
+/* timer at the bottom */
+.time-taked {
+  background-color: var(--bk-second1);
+  padding: 1rem;
+  border-radius: 10px 0 0 0;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.time-taked p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1;
+}

@@ -1,0 +1,35 @@
+.race-type {
+  border-radius: 10px;
+  border: 1px solid var(--bk-second1);
+  margin-bottom: 1rem;
+  min-height: 230px;
+  /* box-shadow: 0 0 10px 5px var(--bk-second1); */
+
+  overflow: hidden;
+}
+
+.race-type-title {
+  padding: 1rem;
+  line-height: 1;
+  font-size: 13px;
+  border-bottom: 1px solid var(--bk-second1);
+}
+
+.race-type-desc {
+  line-height: 2;
+  padding: 1rem;
+  min-height: 150px;
+}
+
+.race-type-action {
+  line-height: 1;
+  background-color: var(--bk-second1);
+  border-top: 1px solid var(--bk-second1);
+}
+
+.race-type-action span p {
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  font-size: 16px;
+}

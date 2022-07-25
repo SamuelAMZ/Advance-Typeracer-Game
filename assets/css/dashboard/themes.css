@@ -1,0 +1,45 @@
+body.theme-1 {
+  /* dark 1 */
+  /* rgb(21, 32, 43); */
+  --bk-prim1: #0c2852;
+  --bk-second1: #2f2fad;
+  --bk-white: rgba(255, 253, 253, 0.843);
+  --bk-black: rgb(7, 5, 5);
+}
+body.theme-2 {
+  /* dark 2 */
+  --bk-prim1: #212121;
+  --bk-second1: #323232;
+  --bk-white: rgb(255, 253, 253);
+  --bk-black: rgb(7, 5, 5);
+}
+body.theme-3 {
+  /* dark 3 */
+  --bk-prim1: #4b2243;
+  --bk-second1: #0b001e;
+  --bk-white: rgba(255, 253, 253, 0.843);
+  --bk-black: rgb(7, 5, 5);
+}
+
+.theme-animation {
+  z-index: -10000;
+  background-color: var(--bk-prim1);
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.482);
+  transform: scale(0);
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  left: 100vw;
+  top: 100vh;
+  display: flex;
+  flex: 0 0 auto;
+  transition: 1s ease-in-out;
+  border-radius: 50%;
+}
+
+.theme-animation.active {
+  transform: scale(1000);
+}
+.theme-animation.deactive {
+  opacity: 0;
+}
