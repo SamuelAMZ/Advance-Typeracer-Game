@@ -18,7 +18,7 @@ import { MoveFunc, modifyWord, modifyChar, modifyMistakes } from "./move.js";
 
 let start = 0;
 
-class Logic extends ViewsFunc {
+export class Logic extends ViewsFunc {
   startState() {
     const elmts = Logic.getViewElements();
     const moveElms = Logic.getMoveElms();
@@ -111,33 +111,3 @@ class Logic extends ViewsFunc {
     return MoveFunc.getElmts();
   }
 }
-
-// events
-const elmts = Logic.getViewElements();
-const logics = new Logic();
-const views = new ViewsFunc();
-
-// put start state to on when click on the start button
-// START NEW RACE
-elmts.normalStart.addEventListener("click", () => {
-  logics.startState();
-  views.loadBotCars();
-});
-elmts.youStart.addEventListener("click", () => {
-  logics.startState();
-  views.loadBotCars();
-});
-elmts.customStart.addEventListener("click", () => {
-  if (OthersFunc.checkBeforeStartCustomRace()) {
-    logics.startState();
-    views.loadBotCars();
-  }
-});
-
-// end state evt when race is over
-// end state evt when user leave the race
-elmts.normalAction.addEventListener("click", logics.endState);
-elmts.newStart.addEventListener("click", logics.endState);
-
-elmts.youVsButton.addEventListener("click", logics.endState);
-elmts.customButton.addEventListener("click", logics.endState);

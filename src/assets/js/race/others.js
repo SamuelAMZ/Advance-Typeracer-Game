@@ -365,22 +365,3 @@ export class OthersFunc {
     }, 2000);
   }
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  OthersFunc.minutesCounter();
-  OthersFunc.showWpmAndCpm();
-});
-
-document.querySelector(".choice-custom-race").addEventListener("click", (e) => {
-  if (e.target.className === "add-new") {
-    OthersFunc.addNewBot(e);
-  }
-  if (e.target.className === "delete-bot") {
-    if (OthersFunc.checkForDeleteBot()) {
-      e.target.parentElement.remove();
-      OthersFunc.newNotification("Bot removed");
-    } else {
-      OthersFunc.newNotification("At leats one bot");
-    }
-  }
-});

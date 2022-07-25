@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TypeRacer Game V1.0</title>
     <!-- font -->
-    <link rel="stylesheet" href="./assets/fonts/alata.css" />
+    <link rel="stylesheet" href="../src/assets/fonts/alata.css" />
     <!-- icons -->
-    <link rel="stylesheet" href="./assets/icons/awesome/icons.min.css" />
+    <link rel="stylesheet" href="../src/assets/icons/awesome/icons.min.css" />
     <!-- css main file -->
-    <link rel="stylesheet" href="./assets/css/dashboard/dashboard.css" />
-    <link rel="stylesheet" href="./assets/css/dashboard/themes.css" />
-    <link rel="stylesheet" href="./assets/css/elements/type_styles.css" />
-    <link rel="stylesheet" href="./assets/css/elements/race-types.css" />
-    <link rel="stylesheet" href="./assets/css/elements/race-views.css" />
-    <link rel="stylesheet" href="./assets/loader/loader.css" />
-    <link rel="stylesheet" href="./assets/css/elements/others.css" />
+    <link rel="stylesheet" href="../src/assets/css/dashboard/dashboard.css" />
+    <link rel="stylesheet" href="../src/assets/css/dashboard/themes.css" />
+    <link rel="stylesheet" href="../src/assets/css/elements/type_styles.css" />
+    <link rel="stylesheet" href="../src/assets/css/elements/race-types.css" />
+    <link rel="stylesheet" href="../src/assets/css/elements/race-views.css" />
+    <link rel="stylesheet" href="../src/assets/loader/loader.css" />
+    <link rel="stylesheet" href="../src/assets/css/elements/others.css" />
   </head>
   <body class="theme-3">
     <header>
@@ -116,7 +116,11 @@
                 <div class="car-start"></div>
 
                 <div class="car-container">
-                  <img id="you-car" src="assets/imgs/car.svg" alt="race car" />
+                  <img
+                    id="you-car"
+                    src="../src/assets/imgs/car.svg"
+                    alt="race car"
+                  />
                 </div>
 
                 <!-- WPM & CPM -->
@@ -374,13 +378,8 @@
     </footer>
 
     <div class="animation"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./assets/js/dashboard/dashboard.js"></script>
-    <script src="./assets/js/dashboard/themes.js"></script>
-    <script type="module" src="./assets/js/views/index.js"></script>
-    <script type="module" src="./assets/js/race/move.js"></script>
-    <script type="module" src="./assets/js/race/logic.js"></script>
-    <script type="module" src="./assets/js/race/others.js"></script>
-    <script type="module" src="./assets/js/race/validation.js"></script>
+    <script type="module" src="bundle.js"></script>
   </body>
 </html>

@@ -24,7 +24,7 @@ class Dashboard {
 
 // ---------------- functions -----------------
 
-class DashboardFunc {
+export class DashboardFunc {
   // events functions ----------------
   // hide panel
   hideDashboard(e) {
@@ -100,20 +100,3 @@ class DashboardFunc {
     return dash;
   }
 }
-
-// ---------------- events ----------------
-const elements = DashboardFunc.callElements();
-const dashFunc = new DashboardFunc();
-
-// hide panel on click of the hide panel button
-elements.hideControl.addEventListener("click", (e) =>
-  dashFunc.hideDashboard(e)
-);
-// mobile hide
-elements.hideControlMobile.addEventListener("click", (e) =>
-  dashFunc.hideDashboard(e)
-);
-// mobile hide back
-elements.hideControlBack.addEventListener("click", (e) =>
-  dashFunc.hideDashboard(e)
-);

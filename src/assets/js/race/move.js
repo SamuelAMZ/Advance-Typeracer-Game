@@ -259,12 +259,12 @@ export class MoveFunc {
   // you vs computer func to load the computer car
   static loadAutoCar() {
     let randomCarColor = [
-      "assets/imgs/car.svg",
-      "assets/imgs/car2.svg",
-      "assets/imgs/car3.svg",
-      "assets/imgs/car4.svg",
-      "assets/imgs/car5.svg",
-      "assets/imgs/car6.svg",
+      "../src/assets/imgs/car.svg",
+      "../src/assets/imgs/car2.svg",
+      "../src/assets/imgs/car3.svg",
+      "../src/assets/imgs/car4.svg",
+      "../src/assets/imgs/car5.svg",
+      "../src/assets/imgs/car6.svg",
     ];
 
     let botCarColor = Math.floor(Math.random() * 6);
@@ -307,20 +307,3 @@ export class MoveFunc {
     newCarsContainer.appendChild(carContainer);
   }
 }
-
-const moveElements = MoveFunc.getElmts();
-// initialize move functions class
-const moveFunction = new MoveFunc();
-
-// events
-// prevent form submition
-document
-  .querySelector("form")
-  .addEventListener("submit", (e) => e.preventDefault());
-
-//   the actual work start here
-
-// check for matches and move the car
-moveElements.typeInput.addEventListener("input", (e) => {
-  moveFunction.move(e);
-});

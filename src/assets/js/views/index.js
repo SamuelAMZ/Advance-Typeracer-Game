@@ -459,36 +459,3 @@ export class ViewsFunc {
     }, 1000);
   }
 }
-
-// events
-const elms = ViewsFunc.getViewElements();
-const views = new ViewsFunc();
-
-// load the normal app per default
-window.addEventListener("DOMContentLoaded", () => {
-  views.loadYouVsView();
-});
-// view event
-// load normal view
-elms.normalAction.addEventListener("click", views.loadNormalView);
-
-elms.normalStart.addEventListener("click", () => {
-  views.startActions();
-}); // start normal race
-// load you vs computer view
-elms.youVsButton.addEventListener("click", views.loadYouVsView);
-elms.youStart.addEventListener("click", () => {
-  views.youActions();
-}); // start you vs race
-// load custom view
-elms.customButton.addEventListener("click", views.loadCustomView);
-elms.customStart.addEventListener("click", () => {
-  if (OthersFunc.checkBeforeStartCustomRace()) {
-    views.customActions();
-  } else {
-    OthersFunc.newNotification("Before start fill in the missing selections");
-  }
-}); // start you vs race
-
-// button "start new race"
-elms.newStart.addEventListener("click", views.loadView);
