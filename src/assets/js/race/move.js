@@ -259,12 +259,12 @@ export class MoveFunc {
   // you vs computer func to load the computer car
   static loadAutoCar() {
     let randomCarColor = [
-      "../src/assets/imgs/car.svg",
-      "../src/assets/imgs/car2.svg",
-      "../src/assets/imgs/car3.svg",
-      "../src/assets/imgs/car4.svg",
-      "../src/assets/imgs/car5.svg",
-      "../src/assets/imgs/car6.svg",
+      "imgs/car.svg",
+      "imgs/car2.svg",
+      "imgs/car3.svg",
+      "imgs/car4.svg",
+      "imgs/car5.svg",
+      "imgs/car6.svg",
     ];
 
     let botCarColor = Math.floor(Math.random() * 6);

@@ -96,9 +96,9 @@ export class Theme {
     let currentTheme = localStorage.getItem("theme");
 
     if (currentTheme === "theme-3") {
-      car.src = "../src/assets/imgs/car2.svg";
+      car.src = "imgs/car2.svg";
     } else {
-      car.src = "../src/assets/imgs/car.svg";
+      car.src = "imgs/car.svg";
     }
   }
 
