@@ -24,6 +24,11 @@ elements.hideControlMobile.addEventListener("click", (e) =>
 elements.hideControlBack.addEventListener("click", (e) =>
   dashFunc.hideDashboard(e)
 );
+// cmake clickable the github link
+const github = document.querySelector(".github");
+github.addEventListener("click", () => {
+  dashFunc.githubLink();
+});
 
 // theme
 const theElement = document.getElementById("footer");

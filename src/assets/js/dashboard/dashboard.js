@@ -99,4 +99,8 @@ export class DashboardFunc {
 
     return dash;
   }
+
+  githubLink() {
+    location.href = "https://github.com/SamuelAMZ/Advance-Typeracer-Game";
+  }
 }

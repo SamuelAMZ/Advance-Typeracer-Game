@@ -83,6 +83,7 @@ header h1 {
     rgba(14, 184, 224, 0) 50%,
     var(--bk-second1) 50%
   );
+  cursor: pointer;
 }
 .container,
 .containtest,
