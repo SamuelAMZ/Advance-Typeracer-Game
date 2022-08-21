@@ -115,7 +115,7 @@ footer > div {
   font-size: 14px;
   line-height: 3;
   padding: 1.5rem 20px 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 .hide-container-dt {
