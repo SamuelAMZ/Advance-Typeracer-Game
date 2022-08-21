@@ -50,7 +50,7 @@ export class Logic extends ViewsFunc {
       moveFunc.loadText();
 
       // restart counter
-      othersFunc.counterTimer(5);
+      othersFunc.counterTimer(12);
       // append chart
       chartParent.appendChild(chartjs);
 
